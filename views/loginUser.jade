@@ -1,0 +1,33 @@
+html
+	head
+		meta(charset="UTF-8")
+		title #{title}
+		link(rel='stylesheet' href='../stylesheets/style.css')
+		link(rel='stylesheet' href='../stylesheets/bootstrap.css')
+	
+	body
+		.container
+			.row
+				.col-md-4
+					div(class="panel panel-danger")
+						.panel-login-heading PLEASE LOGIN!!!
+						.panel-body
+								.formgroup
+									form(name='register', action='/loginUser', method='post')
+										label Email address
+										input(type="email",class="form-control", name="email")
+										br
+										label Enter Password
+										input(type="text",class="form-control", name="password")
+										br
+										label Re-Enter Password
+										input(type="text", class="form-control", name="password2")
+										br
+										button(class="btn btn-primary", type="submit").
+												LOGIN
+				
+											
+			
+	p #{message}
+
+
